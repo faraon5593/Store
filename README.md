@@ -1,1 +1,1 @@
-# sklep
+Testowa aplikacja
