@@ -1,1 +1,1 @@
-Testowa aplikacja
+Testowa aplikacja opis
