@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Sklep</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <title>Tupperware store</title>
+<!-- START:stylesheet -->
+  <%= stylesheet_link_tag :scaffold %>
+  <%= stylesheet_link_tag "depot", :media => "all" %><!-- <label id="code.slt"/> -->
+<!-- END:stylesheet -->
+  <!--<%= javascript_include_tag :defaults %> -->
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tag %><!-- <label id="code.csrf"/> -->
 </head>
-<body>
+<body id="store">
+  <div id="banner">
+    <%= image_tag("http://www.tupperware.pl/xbcr/pl/TUPPERWARE-_LOGO(1).jpg") %>
+	<!--<%= @page_title || "Tupperware store" %> -->
+    <!-- <label id="code.depot.e.title"/> -->
+  </div>
+  <div id="columns">
+    <div id="side">
+      <ul class="right">
+        <%if signed_in?%>
+          <li><%=link_to "Logout", destroy_user_session_path, method: :delete%></li>
+        <%else%>
+          <!-- <li>#<%=link_to "Register", new_user_registration_path%></li> -->
+          <!-- <li>#<%=link_to "Login", new_user_session_path%></li> -->
+        <%end%>
+      </ul>
+      <% if @cart %>
+       <div id="cart"> 
+         <%= render @cart %> 
+       </div> 
+       <% end %>
 
-<%= yield %>
 
+    </div>
+    <div id="main">
+      <%= yield %><!-- <label id="code.depot.e.include"/> -->
+    </div>
+  </div>
 </body>
 </html>

@@ -1,0 +1,219 @@
+#cart, #cart table{
+  font-size: smaller;
+  color: #505050;
+}
+
+#cart table {
+  border-top: 1px dotted #505050;
+  border-bottom: 1px dotted #505050;
+  margin-bottom: 10px;
+}
+
+/* Global styles */
+#store .cart_title {
+  font:120% bold;
+}
+
+#store .item_price, #store .total_line {
+  text-align: right;
+}
+
+#store .total_line .total_cell {
+  font-weight: bold;
+  border-top: 1px solid #505050;
+}
+
+#store .entry form, #store .entry form div {
+  display: inline
+}
+#store #notice {
+        color: #CC0066;
+        border: 2px solid red;
+        padding: 1em;
+        margin-bottom: 2em;
+        background-color: white;
+        font: bold smaller sans-serif;
+}
+
+
+#store h1 {
+        font:  150% sans-serif;
+        color: #CC0066;
+        border-bottom: 3px dotted #505050;
+}
+
+/* Styles for products/index */
+
+#product_list table {
+        border-collapse: collapse;
+}
+
+#product_list table tr td {
+        padding: 5px;
+        vertical-align: top;
+}
+
+#product_list .list_image {
+  width:        60px;
+  height:       70px;
+}
+
+#product_list .list_description {
+  width:        60%;
+}
+
+#product_list .list_description dl {
+        margin: 0;
+}
+
+#product_list .list_description dt {
+  color:        #244;
+  font-weight:  bold;
+  font-size:    larger;
+}
+
+#product_list .list_description dd {
+        margin: 0;
+}
+
+#product_list .list_actions {
+  font-size:    x-small;
+  text-align:   right;
+  padding-left: 1em;
+}
+
+#product_list .list_line_even {
+  background:   white;
+}
+
+#product_list .list_line_odd {
+  background:   #FFCCE0;
+}
+
+/* START:mainlayout */
+/* Styles for main page */
+
+#banner {
+  background: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid;
+  font: bold 40px/40px "Arial", serif;
+  color: #CC0066;
+  text-align: center;
+}
+
+#banner img {
+  float: center;
+}
+
+#columns {
+  background: white;
+}
+
+#main {
+  margin-left: 17em;
+  padding-top: 4ex;
+  padding-left: 2em;
+  background: white;
+}
+
+#side {
+  float: left;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  width: 16em;
+  background: white;
+}
+
+#side a {
+  color: #505050;
+  text-decoration: none;
+}
+#side a:hover {
+  color: #CC0066;
+}
+/* END:mainlayout */
+
+/* An entry in the store catalog */
+
+#store  .entry {
+  overflow: auto;
+  color: #505050;
+  margin-top: 1em;
+  border-bottom: 1px solid #CC0066;
+}
+
+#store  .title {
+  font-size: 120%;
+  font-family: sans-serif;
+}
+
+#store .entry img {
+  width: 80px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  float: left;
+}
+
+
+#store .entry h3 {
+ margin-top: 0;
+ margin-bottom: 2px;
+ color: #404040;
+}
+
+#store .entry p {
+ margin-top: 0.5em; 
+ margin-bottom: 0.8em; 
+}
+
+#store .entry .price_line {
+ clear: both;
+ margin-bottom: 0.5em;
+}
+
+#store .entry .add_to_cart {
+  position: relative;
+}
+
+#store .entry  .price {
+  color: #CC0066;
+  font-weight: bold;
+  margin-right: 2em;
+}
+/* Styles for order form */
+
+.depot_form fieldset {
+  background: #efe;
+}
+
+.depot_form legend {
+  color: #dfd;
+  background: #141;
+  font-family: sans-serif;
+  padding: 0.2em 1em;
+}
+
+.depot_form label {
+  width: 5em;
+  float: left;
+  text-align: right;
+  padding-top: 0.2em;
+  margin-right: 0.1em;
+  display: block;
+}
+
+.depot_form select, .depot_form textarea, .depot_form input {
+  margin-left: 0.5em;
+}
+
+.depot_form .submit {
+  margin-left: 4em;
+}
+
+.depot_form div {
+  margin: 0.5em 0;
+}
+/* END:form */

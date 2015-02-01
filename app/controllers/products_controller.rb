@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+  layout "products"
 
   # GET /products
   # GET /products.json
@@ -19,6 +21,14 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
+  end
+
+  def who_bought
+    @product = Product.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.xml { render :xml => @product }
+    end
   end
 
   # POST /products
