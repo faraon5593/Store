@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>Witaj, <%=h @order.name %>!</h1>
+    <p>
+      Informujemy, iż Twoje zamówienie zostało złożone. Poniżej szczegóły zamówienia:
+
+		      
+		<p>
+		  <strong>Twoje dane osobowe:</strong>
+		  <%= @order.name %>
+		</p>
+
+		<p>
+		  <strong>Twój adres:</strong>
+		  <%= @order.address %>
+		</p>
+
+		<p>
+		  <strong>Typ płatności:</strong>
+		  <%= @order.pay_type %>
+		</p>
+		<p>
+		  <strong>Zakupione przedmioty:</strong>
+		    <br>
+		    <% a = 0 %>
+		  <% @order.line_items.each do |it| %>
+		
+		  <%= it.quantity  %> &times; <%= Product.find(it.product_id).title %>: <%= it.total_price %> zł
+		  <% a += it.total_price %> 
+			<br>
+		  <% end %>
+		 <h3>Suma: <%= a %> zł</h3>
+
+		</p>
+    </p>
+    <p>Dziękujemy i życzymy miłego dnia!</p>
+  </body>
+</html>

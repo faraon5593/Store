@@ -3,4 +3,9 @@ class StoreController < ApplicationController
   	@products = Product.all
   	@cart = current_cart
   end
+
+  def podglad
+  	@cart = current_cart
+  	@id = params[:id] 
+  end
 end

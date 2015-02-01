@@ -56,9 +56,10 @@ class OrdersController < ApplicationController
     @order.add_line_items_from_cart(current_cart)
     respond_to do |format|
       if @order.save
+        Potwierdzenie.Potwierdzenie_klient(@order, Cart.find(session[:cart_id]).total_price).deliver_now 
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
-        format.html { redirect_to store_url, notice: 'Zamówienie zostało złożone' }
+        format.html { redirect_to store_url, notice: 'Zamówienie zostało złożone. Potwierdzenie zostało wysłane na maila.' }
         format.json { render :show, status: :created, location: @order }
       else
         format.html { render :new }

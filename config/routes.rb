@@ -15,6 +15,7 @@ end
 resource :account, :controller => 'users'
 resources :users
 resource :user_session
+
   get 'store/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -26,7 +27,7 @@ resource :user_session
   # HEREpost 'logout' => 'user_sessions#destroy', :as => :logout
   # Example of regular route:
   get 'products/:id' => 'catalog#view'
-
+  get '/podglad/:id', to: 'store#podglad'
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
