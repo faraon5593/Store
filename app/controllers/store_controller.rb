@@ -1,6 +1,9 @@
 class StoreController < ApplicationController
+	layout "podglad", only: [:podglad]
+
   def index
-  	@products = Product.all
+  	@search = Product.search(params[:q])
+    @products = @search.result
   	@cart = current_cart
   end
 

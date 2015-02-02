@@ -18,22 +18,7 @@
   </div>
   <div id="columns">
     <div id="side">
-      <div id="szukaj">
-              <%= search_form_for @search, url: ''  do |f| %>
-                <div class="field">
-                  <%= f.label :title_cont, "Nazwa zawiera" %>
-                  <%= f.text_field :title_cont %>
-                </div>
-                    <div class="field">
-                      <%= f.label :price_gteq, "Price between" %>
-                      <%= f.text_field :price_gteq %>
-                      <%= f.label :price_lteq, "and" %>
-                      <%= f.text_field :price_lteq %>    
-                    </div>
-
-                <div class="actions"><%= f.submit "Szukaj" %></div>
-              <% end %>
-      </div>
+     
       <ul class="right">
         <%if signed_in?%>
           <li><%=link_to "Logout", destroy_user_session_path, method: :delete%></li>

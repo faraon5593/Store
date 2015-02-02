@@ -1,5 +1,5 @@
 class Potwierdzenie < ApplicationMailer
-  default from: "faraon5593@interia.pl"
+  default from: "store@interia.pl"
 	def Potwierdzenie_klient(order,cena)
 	    @order = order
 	    @cena = cena

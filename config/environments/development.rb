@@ -21,8 +21,8 @@ Rails.application.configure do
                     :address        => "poczta.interia.pl",
                     :port           => 587,
                     :authentication => :plain,
-                    :user_name      => "faraon5593@interia.pl",
-                    :password       => "faraon",
+                    :user_name      => "store@interia.pl",
+                    :password       => "administrator5593",
                     :openssl_verify_mode  => 'none'
   } 
   # Print deprecation notices to the Rails logger.

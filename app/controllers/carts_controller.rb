@@ -1,6 +1,6 @@
 class CartsController < ApplicationController
   before_action :set_cart, only: [:show, :edit, :update]
-
+  before_filter :authenticate_user!, :only => [:show, :index]
   # GET /carts
   # GET /carts.json
   def index

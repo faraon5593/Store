@@ -2,11 +2,13 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
   layout "products"
+  
 
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    @search = Product.search(params[:q])
+    @products = @search.result
   end
 
   # GET /products/1
