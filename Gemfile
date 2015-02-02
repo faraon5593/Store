@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem 'tinymce-rails'
 gem 'ransack'
 gem 'will_paginate', '>= 3.0.pre'
 gem 'devise'
