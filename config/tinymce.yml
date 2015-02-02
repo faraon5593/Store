@@ -1,6 +1,11 @@
-toolbar:
-  - styleselect | bold italic | undo redo
-  - image | link
-plugins:
-  - image
-  - link
+default:
+  plugins:
+    - image
+    - link
+
+alternate:
+  toolbar: styleselect | bold italic | undo redo | table | fontselect | fontsizeselect
+  plugins:
+    - table
+    - image
+    - link

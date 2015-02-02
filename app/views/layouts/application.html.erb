@@ -21,22 +21,24 @@
       <div id="szukaj">
               <%= search_form_for @search, url: ''  do |f| %>
                 <div class="field">
-                  <%= f.label :title_cont, "Nazwa zawiera" %>
+                  <%= f.label :title_cont, "Nazwa zawiera:" %>
                   <%= f.text_field :title_cont %>
                 </div>
+                <br>
                     <div class="field">
-                      <%= f.label :price_gteq, "Price between" %>
+                      <%= f.label :price_gteq, "Cena z przedziału:" %><br>
                       <%= f.text_field :price_gteq %>
-                      <%= f.label :price_lteq, "and" %>
+                      <%= f.label :price_lteq, "-" %>
                       <%= f.text_field :price_lteq %>    
                     </div>
-
+                <br>
+                <%= link_to "Wyczyść", request.path%>
                 <div class="actions"><%= f.submit "Szukaj" %></div>
-              <% end %>
+              <% end %><br>
       </div>
       <ul class="right">
         <%if signed_in?%>
-          <li><%=link_to "Logout", destroy_user_session_path, method: :delete%></li>
+          <li><%=link_to "Wyloguj", destroy_user_session_path, method: :delete%></li>
         <%else%>
           <!-- <li>#<%=link_to "Register", new_user_registration_path%></li> -->
           <!-- <li>#<%=link_to "Login", new_user_session_path%></li> -->

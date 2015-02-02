@@ -12,23 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
+      <strong>Nazwa:</strong>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description, :class => "tinymce", :rows => 40, :cols => 120 %>
+      <strong>Opis:</strong><br>
+    <%= f.text_area :description, :class => "tinymce", :rows => 30, :cols => 100 %>
     <%= tinymce :alternate%>
   </div>
   <div class="field">
-    <%= f.label :image_url %><br>
+      <strong>Adres obrazka:</strong><br>
     <%= f.text_field :image_url %>
   </div>
   <div class="field">
-    <%= f.label :price %><br>
+      <strong>Cena:</strong><br>
     <%= f.text_field :price %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Zapisz" %>
   </div>
 <% end %>
