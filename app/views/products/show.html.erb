@@ -1,5 +1,9 @@
-<p id="notice"><%= notice %></p>
+<% if notice %>
+<div class="alert-box [success warning error]">
+	<%= notice %>
 
+</div>
+	<% end %>
 <p>
   <strong>Nazwa:</strong>
   <%= @product.title %>
