@@ -1,11 +1,11 @@
-Tue, 03 Feb 2015 23:38:23 +0100
+Tue, 03 Feb 2015 23:56:45 +0100
 README.rdoc	Fri, 16 Jan 2015 18:21:22 +0100
-app/controllers/application_controller.rb	Tue, 03 Feb 2015 22:22:56 +0100
-app/controllers/carts_controller.rb	Tue, 03 Feb 2015 20:20:56 +0100
+app/controllers/application_controller.rb	Tue, 03 Feb 2015 23:50:48 +0100
+app/controllers/carts_controller.rb	Tue, 03 Feb 2015 23:51:01 +0100
 app/controllers/line_items_controller.rb	Thu, 29 Jan 2015 18:43:44 +0100
-app/controllers/orders_controller.rb	Sun, 01 Feb 2015 18:35:55 +0100
+app/controllers/orders_controller.rb	Tue, 03 Feb 2015 23:51:25 +0100
 app/controllers/products_controller.rb	Mon, 02 Feb 2015 15:16:31 +0100
-app/controllers/store_controller.rb	Mon, 02 Feb 2015 15:17:03 +0100
+app/controllers/store_controller.rb	Tue, 03 Feb 2015 23:52:21 +0100
 app/controllers/user_sessions_controller.rb	Mon, 02 Feb 2015 14:51:48 +0100
 app/controllers/users_controller.rb	Mon, 02 Feb 2015 14:57:16 +0100
 app/helpers/application_helper.rb	Fri, 16 Jan 2015 18:21:22 +0100
@@ -17,10 +17,10 @@ app/helpers/store_helper.rb	Fri, 16 Jan 2015 23:36:30 +0100
 app/helpers/user_sessions_helper.rb	Fri, 30 Jan 2015 16:51:51 +0100
 app/helpers/users_helper.rb	Fri, 30 Jan 2015 17:13:26 +0100
 app/mailers/application_mailer.rb	Mon, 02 Feb 2015 14:41:27 +0100
-app/mailers/potwierdzenie.rb	Mon, 02 Feb 2015 14:41:36 +0100
-app/models/cart.rb	Wed, 28 Jan 2015 19:29:09 +0100
-app/models/line_item.rb	Thu, 29 Jan 2015 21:20:38 +0100
-app/models/order.rb	Thu, 29 Jan 2015 21:24:51 +0100
+app/mailers/potwierdzenie.rb	Tue, 03 Feb 2015 23:52:47 +0100
+app/models/cart.rb	Tue, 03 Feb 2015 23:53:14 +0100
+app/models/line_item.rb	Tue, 03 Feb 2015 23:54:00 +0100
+app/models/order.rb	Tue, 03 Feb 2015 23:54:17 +0100
 app/models/product.rb	Mon, 02 Feb 2015 14:04:47 +0100
 app/models/user.rb	Sat, 31 Jan 2015 21:37:25 +0100
-app/models/user_session.rb	Fri, 30 Jan 2015 17:00:59 +0100
+app/models/user_session.rb	Tue, 03 Feb 2015 23:54:45 +0100

@@ -137,7 +137,7 @@
 
           
           <div class="method-source-code" id="create-source">
-            <pre><span class="ruby-comment"># File app/controllers/carts_controller.rb, line 38</span>
+            <pre><span class="ruby-comment"># File app/controllers/carts_controller.rb, line 39</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
   <span class="ruby-ivar">@cart</span> = <span class="ruby-constant">Cart</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">cart_params</span>)
 
@@ -180,7 +180,7 @@
 
           
           <div class="method-source-code" id="destroy-source">
-            <pre><span class="ruby-comment"># File app/controllers/carts_controller.rb, line 68</span>
+            <pre><span class="ruby-comment"># File app/controllers/carts_controller.rb, line 69</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
   <span class="ruby-ivar">@cart</span> = <span class="ruby-identifier">current_cart</span>
   <span class="ruby-ivar">@cart</span>.<span class="ruby-identifier">destroy</span>
@@ -222,7 +222,7 @@
 
           
           <div class="method-source-code" id="edit-source">
-            <pre><span class="ruby-comment"># File app/controllers/carts_controller.rb, line 33</span>
+            <pre><span class="ruby-comment"># File app/controllers/carts_controller.rb, line 34</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">edit</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -254,7 +254,7 @@
 
           
           <div class="method-source-code" id="index-source">
-            <pre><span class="ruby-comment"># File app/controllers/carts_controller.rb, line 7</span>
+            <pre><span class="ruby-comment"># File app/controllers/carts_controller.rb, line 8</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
   <span class="ruby-ivar">@carts</span> = <span class="ruby-constant">Cart</span>.<span class="ruby-identifier">all</span>
 <span class="ruby-keyword">end</span></pre>
@@ -287,7 +287,7 @@
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File app/controllers/carts_controller.rb, line 28</span>
+            <pre><span class="ruby-comment"># File app/controllers/carts_controller.rb, line 29</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
   <span class="ruby-ivar">@cart</span> = <span class="ruby-constant">Cart</span>.<span class="ruby-identifier">new</span>
 <span class="ruby-keyword">end</span></pre>
@@ -320,7 +320,7 @@
 
           
           <div class="method-source-code" id="show-source">
-            <pre><span class="ruby-comment"># File app/controllers/carts_controller.rb, line 13</span>
+            <pre><span class="ruby-comment"># File app/controllers/carts_controller.rb, line 14</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
   <span class="ruby-keyword">begin</span>
     <span class="ruby-ivar">@cart</span> = <span class="ruby-constant">Cart</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
@@ -363,7 +363,7 @@
 
           
           <div class="method-source-code" id="update-source">
-            <pre><span class="ruby-comment"># File app/controllers/carts_controller.rb, line 54</span>
+            <pre><span class="ruby-comment"># File app/controllers/carts_controller.rb, line 55</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
     <span class="ruby-keyword">if</span> <span class="ruby-ivar">@cart</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">cart_params</span>)

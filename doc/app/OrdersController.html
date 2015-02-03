@@ -137,7 +137,7 @@
 
           
           <div class="method-source-code" id="create-source">
-            <pre><span class="ruby-comment"># File app/controllers/orders_controller.rb, line 57</span>
+            <pre><span class="ruby-comment"># File app/controllers/orders_controller.rb, line 45</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
   <span class="ruby-ivar">@order</span> = <span class="ruby-constant">Order</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">order_params</span>)
   <span class="ruby-ivar">@order</span>.<span class="ruby-identifier">add_line_items_from_cart</span>(<span class="ruby-identifier">current_cart</span>)
@@ -183,7 +183,7 @@
 
           
           <div class="method-source-code" id="destroy-source">
-            <pre><span class="ruby-comment"># File app/controllers/orders_controller.rb, line 90</span>
+            <pre><span class="ruby-comment"># File app/controllers/orders_controller.rb, line 78</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
   <span class="ruby-ivar">@order</span>.<span class="ruby-identifier">destroy</span>
   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
@@ -220,7 +220,7 @@
 
           
           <div class="method-source-code" id="edit-source">
-            <pre><span class="ruby-comment"># File app/controllers/orders_controller.rb, line 52</span>
+            <pre><span class="ruby-comment"># File app/controllers/orders_controller.rb, line 40</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">edit</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -252,24 +252,14 @@
 
           
           <div class="method-source-code" id="index-source">
-            <pre><span class="ruby-comment"># File app/controllers/orders_controller.rb, line 10</span>
+            <pre><span class="ruby-comment"># File app/controllers/orders_controller.rb, line 8</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
-  <span class="ruby-ivar">@orders</span> = <span class="ruby-constant">Order</span>.<span class="ruby-identifier">paginate</span> <span class="ruby-value">:page=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>]<span class="ruby-comment">#, :order=&gt;&#39;created_at desc&#39;</span>
-  <span class="ruby-comment">#   :per_page =&gt; 10</span>
-
-  <span class="ruby-comment"># @orders = paginate(page: params[:page], :per_page =&gt; 10)</span>
+  <span class="ruby-ivar">@orders</span> = <span class="ruby-constant">Order</span>.<span class="ruby-identifier">paginate</span> <span class="ruby-value">:page=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>]
 
   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> <span class="ruby-comment"># index.html.erb</span>
     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span>  { <span class="ruby-identifier">render</span> <span class="ruby-value">:xml</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@orders</span> }
   <span class="ruby-keyword">end</span>
-
-   <span class="ruby-comment"># paginate page: page,</span>
-   <span class="ruby-comment">#       per_page: 10,</span>
-   <span class="ruby-comment">#       conditions: [&#39;name LIKE ?&#39;, &quot;%#{search}%&quot;],</span>
-   <span class="ruby-comment">#       order: &#39;name&#39;</span>
-
-   <span class="ruby-comment">#  order(&#39;name&#39;).where(&#39;name LIKE ?&#39;, &quot;%#{search}%&quot;).paginate(page: page, per_page: 10)</span>
 
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -301,7 +291,7 @@
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File app/controllers/orders_controller.rb, line 36</span>
+            <pre><span class="ruby-comment"># File app/controllers/orders_controller.rb, line 24</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
   <span class="ruby-ivar">@cart</span> = <span class="ruby-identifier">current_cart</span>
   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@cart</span>.<span class="ruby-identifier">line_items</span>.<span class="ruby-identifier">empty?</span>
@@ -345,7 +335,7 @@
 
           
           <div class="method-source-code" id="show-source">
-            <pre><span class="ruby-comment"># File app/controllers/orders_controller.rb, line 32</span>
+            <pre><span class="ruby-comment"># File app/controllers/orders_controller.rb, line 20</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -377,7 +367,7 @@
 
           
           <div class="method-source-code" id="update-source">
-            <pre><span class="ruby-comment"># File app/controllers/orders_controller.rb, line 76</span>
+            <pre><span class="ruby-comment"># File app/controllers/orders_controller.rb, line 64</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
     <span class="ruby-keyword">if</span> <span class="ruby-ivar">@order</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">order_params</span>)

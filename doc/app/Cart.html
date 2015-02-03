@@ -121,13 +121,13 @@
 
         <div class="method-description">
           
-          
+          <p>dodaj produkty do koszyka</p>
           
           
 
           
           <div class="method-source-code" id="add_product-source">
-            <pre><span class="ruby-comment"># File app/models/cart.rb, line 3</span>
+            <pre><span class="ruby-comment"># File app/models/cart.rb, line 5</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">add_product</span>(<span class="ruby-identifier">product_id</span>)
   <span class="ruby-identifier">current_item</span> = <span class="ruby-identifier">line_items</span>.<span class="ruby-identifier">find_by_product_id</span>(<span class="ruby-identifier">product_id</span>)
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">current_item</span>
@@ -160,13 +160,13 @@
 
         <div class="method-description">
           
-          
+          <p>wartość koszyka</p>
           
           
 
           
           <div class="method-source-code" id="total_price-source">
-            <pre><span class="ruby-comment"># File app/models/cart.rb, line 13</span>
+            <pre><span class="ruby-comment"># File app/models/cart.rb, line 16</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">total_price</span>
      <span class="ruby-identifier">line_items</span>.<span class="ruby-identifier">to_a</span>.<span class="ruby-identifier">sum</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">total_price</span>}
 <span class="ruby-keyword">end</span></pre>

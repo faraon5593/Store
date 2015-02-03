@@ -121,13 +121,13 @@
 
         <div class="method-description">
           
-          
+          <p>zwraca produkty spełniające kryteria wyszukiwania</p>
           
           
 
           
           <div class="method-source-code" id="index-source">
-            <pre><span class="ruby-comment"># File app/controllers/store_controller.rb, line 4</span>
+            <pre><span class="ruby-comment"># File app/controllers/store_controller.rb, line 5</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
       <span class="ruby-ivar">@search</span> = <span class="ruby-constant">Product</span>.<span class="ruby-identifier">search</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:q</span>])
   <span class="ruby-ivar">@products</span> = <span class="ruby-ivar">@search</span>.<span class="ruby-identifier">result</span>
@@ -156,13 +156,13 @@
 
         <div class="method-description">
           
-          
+          <p>pogląd pojedynczego produktu</p>
           
           
 
           
           <div class="method-source-code" id="podglad-source">
-            <pre><span class="ruby-comment"># File app/controllers/store_controller.rb, line 10</span>
+            <pre><span class="ruby-comment"># File app/controllers/store_controller.rb, line 12</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">podglad</span>
       <span class="ruby-ivar">@cart</span> = <span class="ruby-identifier">current_cart</span>
       <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>] 
