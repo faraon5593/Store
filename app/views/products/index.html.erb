@@ -1,4 +1,17 @@
 
+
+
+<% if notice %>
+<div class="alert-box success ">
+  <%= notice %>
+</div>
+<% end %>
+<div>
+<ul class="breadcrumbs">
+  <li><%= link_to 'Sklep', store_path %></li>
+  <li class="current"><%= link_to 'Produkty', products_path %></li>
+</ul>
+  </div>
 <div id="product_list">
   <h1>Oferta</h1>
 
@@ -21,7 +34,7 @@
 
       <td class="list_actions">
         
-        <%= link_to 'Edytuj', edit_product_path(product),:class => 'button tiny radius' %><br/>
+        <%= link_to 'Edytuj', edit_product_path(product), :class => 'button tiny radius' %><br/>
         <%= link_to 'Usuń', product, 
                     :data => {:confirm => 'Na pewno?'},
                     :method => :delete,

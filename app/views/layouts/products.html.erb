@@ -18,6 +18,21 @@
 	<!--<%= @page_title || "Tupperware store" %> -->
     <!-- <label id="code.depot.e.title"/> -->
   </div>
+   <nav class="top-bar" data-topbar role="navigation">
+  
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="active"><%=link_to "Wyloguj", destroy_user_session_path, method: :delete, :class=>"button"%></li>
+    </ul>
+
+    <!-- Left Nav Section -->
+    <ul class="left">
+      <li class="active"><%=link_to "Produkty", products_path%></li>
+      <li ><%=link_to "Zamówienia", orders_path%></li>
+    </ul>
+  </section>
+</nav>
   <div id="columns">
     <div id="side">
 

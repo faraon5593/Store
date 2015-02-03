@@ -18,22 +18,26 @@
 	<!--<%= @page_title || "Tupperware store" %> -->
     <!-- <label id="code.depot.e.title"/> -->
   </div>
+
   <div id="columns">
     <div id="side">
-     
+       
       <ul class="right">
-        <%if signed_in?%>
-          <li><%=link_to "Logout", destroy_user_session_path, method: :delete%></li>
+
+      </ul>
+      <% if @cart %>
+
+       <div id="cart"> 
+         <%= render @cart %> 
+       </div> 
+      
+       <% end %>
+               <%if signed_in?%>
+         <%=link_to "Wyloguj", destroy_user_session_path, method: :delete, :class=>"small button"%>
         <%else%>
           <!-- <li>#<%=link_to "Register", new_user_registration_path%></li> -->
           <!-- <li>#<%=link_to "Login", new_user_session_path%></li> -->
         <%end%>
-      </ul>
-      <% if @cart %>
-       <div id="cart"> 
-         <%= render @cart %> 
-       </div> 
-       <% end %>
     </div>
     <div id="main">
       <%= yield %><!-- <label id="code.depot.e.include"/> -->

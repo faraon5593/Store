@@ -6,7 +6,9 @@ class ApplicationController < ActionController::Base
   helper_method :current_user_session, :current_user
   helper :all
   layout :layout_by_resource
+  add_breadcrumb "home", :store_path
 
+  # add_breadcrumb "my", :my_path
   protected
 
   def layout_by_resource

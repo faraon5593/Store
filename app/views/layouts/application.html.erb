@@ -18,6 +18,24 @@
 	<!--<%= @page_title || "Tupperware store" %> -->
     <!-- <label id="code.depot.e.title"/> -->
   </div>
+    <%if signed_in?%>
+<nav class="top-bar" data-topbar role="navigation">
+  
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li ><%=link_to "Wyloguj", destroy_user_session_path, method: :delete, :class=>"button"%></li>
+    </ul>
+
+    <!-- Left Nav Section -->
+    <ul class="left">
+      <li><%=link_to "Produkty", products_path%></li>
+      <li class="divider"></li>
+      <li class="active"><%=link_to "Zamówienia", orders_path%></li>
+    </ul>
+  </section>
+</nav>
+  <%end%>
   <div id="columns">
     <div id="side">
       <div id="szukaj">
@@ -28,9 +46,9 @@
                 </div>
                 <br>
                     <div class="field">
-                      <%= f.label :price_gteq, "Cena z przedziału:" %><br>
+                      <%= f.label :price_gteq, "Cena od:" %><br>
                       <%= f.text_field :price_gteq %>
-                      <%= f.label :price_lteq, "-" %>
+                      <%= f.label :price_lteq, "Cena do:" %>
                       <%= f.text_field :price_lteq %>    
                     </div>
                 <br>
@@ -40,12 +58,7 @@
               <% end %><br>
       </div>
      
-        <%if signed_in?%>
-          <%=link_to "Wyloguj", destroy_user_session_path, method: :delete, :class => 'button small radius'%>
-        <%else%>
-          <!-- <li>#<%=link_to "Register", new_user_registration_path%></li> -->
-          <!-- <li>#<%=link_to "Login", new_user_session_path%></li> -->
-        <%end%>
+
     
       <% if @cart %>
        <div id="cart"> 

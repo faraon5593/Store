@@ -1,5 +1,20 @@
+
+
+
+<% if notice %>
+<div class="alert-box success">
+	<%= notice %>
+</div>
+<% end %>
+
+<div>
+<ul class="breadcrumbs">
+  <li><%= link_to 'Sklep', store_path %></li>
+  <li><%= link_to 'Produkty', products_path %></li>
+  <li class="current"><a href="#">Tworzenie produktu</a></li>
+</ul>
+  </div>
 <h1>Nowy produkt</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Cofnij', products_path %>

@@ -1,5 +1,20 @@
+
+
+
 <% if notice %>
-<div class="alert-box [success warning error]">
+<div class="alert-box success ">
+  <%= notice %>
+</div>
+<% end %>
+<div>
+<ul class="breadcrumbs">
+  <li><%= link_to 'Sklep', store_path %></li>
+  <li><%= link_to 'Produkty', products_path %></li>
+  <li class="current"><a href="#">Podgląd produktu</a></li>
+</ul>
+  </div>
+<% if notice %>
+<div class="alert-box success ">
 	<%= notice %>
 
 </div>
@@ -9,7 +24,7 @@
   <%= @product.title %>
 </p>
 
-<p>
+<p style="word-wrap:break-word;">
   <strong>Opis:</strong>
   <%=sanitize(@product.description) %>
 </p>

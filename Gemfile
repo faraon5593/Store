@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem "breadcrumbs_on_rails"
 gem 'foundation-rails'
 gem 'tinymce-rails'
 gem 'tinymce-rails-langs'

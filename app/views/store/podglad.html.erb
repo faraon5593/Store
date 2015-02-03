@@ -1,3 +1,17 @@
+
+
+
+<% if notice %>
+<div class="alert-box success ">
+  <%= notice %>
+</div>
+<% end %>
+<div>
+<ul class="breadcrumbs">
+  <li><%= link_to 'Sklep', store_path %></li>
+  <li class="current"><a href="#">Podgląd produktu</a></li>
+</ul>
+  </div>
 <% product = Product.find(@id) %>
 
     	<%= image_tag(product.image_url,:class => "th")  %>
