@@ -1,29 +1,17 @@
 class OrdersController < ApplicationController
+
   before_action :set_order, only: [:show, :edit, :update, :destroy]
-
-
-
   layout "order"
 
   # GET /orders
   # GET /orders.json
   def index
-    @orders = Order.paginate :page=>params[:page]#, :order=>'created_at desc'
-    #   :per_page => 10
-
-    # @orders = paginate(page: params[:page], :per_page => 10)
+    @orders = Order.paginate :page=>params[:page]
 
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @orders }
     end
-
-     # paginate page: page,
-     #       per_page: 10,
-     #       conditions: ['name LIKE ?', "%#{search}%"],
-     #       order: 'name'
-
-     #  order('name').where('name LIKE ?', "%#{search}%").paginate(page: page, per_page: 10)
 
   end
 

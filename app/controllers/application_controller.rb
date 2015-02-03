@@ -1,14 +1,9 @@
 class ApplicationController < ActionController::Base
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
-#filter_parameter_logging :password, :password_confirmation
   helper_method :current_user_session, :current_user
   helper :all
   layout :layout_by_resource
-  add_breadcrumb "home", :store_path
-
-  # add_breadcrumb "my", :my_path
+  
   protected
 
   def layout_by_resource
@@ -18,7 +13,9 @@ class ApplicationController < ActionController::Base
       "application"
     end
   end
+
   private 
+  #pobiera aktualny koszyk/ tworzy nowy
   	def current_cart
   		Cart.find(session[:cart_id])
   	rescue ActiveRecord::RecordNotFound
@@ -29,6 +26,7 @@ class ApplicationController < ActionController::Base
 
    
     private
+    #metody pomocnicze dla Devise
     def current_user_session
       return @current_user_session if defined?(@current_user_session)
       @current_user_session = UserSession.find
